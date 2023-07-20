@@ -1,0 +1,8 @@
+<h1>Here is your translation!</h1>
+<div id='translation'>
+  <% if @translation %>
+    <h2>Translation:</h2>
+    <p><%= @translation.translated %></p>
+    <%= link_to 'back', method: :get, url: '/' %>
+  <% end %>
+</div>

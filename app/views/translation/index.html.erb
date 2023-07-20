@@ -1,0 +1,12 @@
+<h1>Let us get this translation started!</h1>
+
+<div>
+  <%= form_with url: '/', method: :post, local: true do |form| %>
+    <%= form.label :language %>
+    <%= form.select :language, ["pirate", "minion", "ermahgerd", "yoda", "gungan", "klingon", "vulcan", "dotraki", "sindarin", "boston", "redneck", "hodor", "shakespeare", "british"] %>
+    <%= form.label :message %>
+    <%= form.text_field :message %>
+    <%= form.submit 'Translate' %>
+  <% end %>
+</div>
+

@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe TranslatorService do
   describe 'get_translation' do
     it 'returns a hash' do
+      stub_request(:get, "https://api.funtranslations.com/translate/pirate.json?text=Hello%20World")
+      .to_return(status: 200, body: File.read('./spec/fixtures/translation_service.json'))
       lang = 'pirate'
       text = 'Hello World'
 
